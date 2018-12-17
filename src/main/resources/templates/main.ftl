@@ -3,6 +3,7 @@
 <@c.page>
 <div>
     <@l.logout/>
+    <span><a href="/user">List of users</a> </span>
 </div>
 <div>
     <div>
@@ -14,9 +15,8 @@
         </form>
     </div>
     Список сообщений
-    <form method="post" action="filter">
-        <input type="text" name="filter">
-        <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <form method="get" action="/main">
+        <input type="text" name="filter" value="${filter}">
         <button type="submit">Find</button>
     </form>
 
